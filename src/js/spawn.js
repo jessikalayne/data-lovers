@@ -212,9 +212,9 @@ function showPeriods(type){
     });
 }
 
-var menu = document.getElementsByClassName("open-menu");
-for(var i = 0; i < menu.length; i++) {
-    menu[i].addEventListener("click", function() {
+var menus = document.getElementsByClassName("open-menu");
+menus.forEach(menu => {
+    menu.addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
         if (content.style.display === "block") {
@@ -225,7 +225,7 @@ for(var i = 0; i < menu.length; i++) {
             content.style.maxHeight = content.scrollHeight + "px";
         }
     });
-}
+}) 
 
 function translate (type){
     switch (type){
