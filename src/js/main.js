@@ -67,7 +67,7 @@ function orderBy (order) {
         <h3>Peso: ${pokemon["weight"]}</h3>
         <h3>Candies: ${candiesCount(pokemon["candy_count"])}</h3>
         ${pokemon["type"].map(tipo => `
-        <button class="type-poke">${translate(tipo)}</button>
+        <button class="type-poke color-${tipo}">${translate(tipo)}</button>
         `).join("")}
         </div>
         `).join("")}

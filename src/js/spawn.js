@@ -212,8 +212,11 @@ function showPeriods(type){
     });
 }
 
-var menus = document.getElementsByClassName("open-menu");
-menus.forEach(menu => {
+// precisei transformar menus em arry pois menus.forEach não estava sendoreconehcido
+// como função. 
+
+const menus = document.getElementsByClassName("open-menu");
+Array.from(menus).forEach(menu => {
     menu.addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
@@ -226,6 +229,7 @@ menus.forEach(menu => {
         }
     });
 }) 
+
 
 function translate (type){
     switch (type){
